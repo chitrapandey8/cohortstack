@@ -6,8 +6,11 @@
 //browsers understands html, css, javascript.
 // js is dynamically typed language means one variable can store differnt data types
 // js is single threaded languagen, a core can run one js program at once.it is considered to be bad language for scalable systems.
-// 
-//
+// NON - blocking??
+//meta deta--objects can be very complex.
+
+import { futimes } from "node:fs";
+import { loadavg } from "node:os";
 
 // let obj = {
 // 	name: "chitarnshi",
@@ -71,7 +74,7 @@
 
 // function sum(num1, num2, fntocall) { //this function somehow called aonthoer fucntion in this case which is displayresult
 //     let result = num1 + num2;
-//     return result;
+//     fntocall(result)
 // }
 
 // function displayResult(data) {
@@ -82,6 +85,7 @@
 //     console.log("Sum's result is : " + data);
 // }
 
+// sum(2,3,displayResult)
 // console.log(sum(2,3,displayResult));
 
 // function calculate(a,b,type){
@@ -111,9 +115,72 @@
 
 // setTimeout(greet,1000)
 
-function greet(){
-    console.log("hello world");
-    
-}
+// function greet(){
+//     console.log("hello world"); 
+// }
+// setInterval(greet,1000)
 
-setInterval(greet,1000)
+// let clock = 30;
+// let stop = clock+2;
+// const id = setInterval(()=>{
+//    console.log(clock);
+//    clock--;
+// },1000)
+// //clear Interval and clear timeout comes with setinterval
+// setTimeout(()=>{
+// clearInterval(id)
+// console.log("clock stopped");
+// },stop*1000)
+
+///settimout
+
+// setTimeout(()=>{
+// const start = Date.now()
+// let sum = 0;
+// for(let i = 0; i<100000000; i++){
+// sum += i;
+// }
+// const end = Date.now();
+// console.log(`total time it took is ${(end - start)/1000}`);
+// },5000)
+
+//cluster module -- node process ek hi core pe chlta hai toh baki core waste hote h, cluster module node js ki libararay hai jo multiple process run krta hai , agar 10 core h toh 10 worker bana deta hai, unki alagalag ides hongi, jo bhi kahlai worker hota hai process ko excute result return krta hai.
+
+
+//custom setinterval with settimout 
+// function customSetinterval(fn, delay){
+// function immediate(){
+//     fn();
+//     setTimeout(immediate, delay);
+// }
+// immediate()
+// }
+
+// customSetinterval(()=>{
+// console.log("hello");
+// },1000)
+
+//setinterval that stops after 5 sec, without usin setinterval and clearinterval
+
+function customSetinterval(fn, delay){
+let isrunning = true;
+function run(){
+    if(!isrunning == false){
+    return;
+    }
+     fn()
+    setTimeout(run, delay)
+}
+run()
+}
+customSetinterval(()=>{
+console.log("hello world");
+},1000)
+
+
+setTimeout(()=>{
+  isrunning = false  
+},5000)
+
+
+
