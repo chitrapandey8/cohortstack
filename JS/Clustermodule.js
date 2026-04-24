@@ -2,8 +2,11 @@ import cluster from "cluster";
 import os from "os";
 import express from "express";
 
+//cpu mai sare cores ko active kardiya, khali workers ko kaam assign karna or  wokers kaam krke master process ko assign kar deta hai.
 //Find Number of Cores 
 const numCPUs = os.cpus().length;
+console.log(numCPUs);
+
 
 //MASTER PROCESS
 if (cluster.isPrimary) { //find if master process

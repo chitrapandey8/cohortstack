@@ -1,7 +1,7 @@
 //what is currently running or whatever we are running currently on our laptop it goes in ram.
 //ssd--photos video that are not running cureently resides in ssd.
 //we neend language becoz we cannot code in 01010 and complier convert it into 01010 which is understood my computer.
-//g++ c++ ka complier hai commaond "g++ file.cpp -o temp".
+//g++ c++ ka complier hai commaond "g++ file.cpp -o temp.exe".
 //replit.
 //browsers understands html, css, javascript.
 // js is dynamically typed language means one variable can store differnt data types
@@ -9,8 +9,6 @@
 // NON - blocking??
 //meta deta--objects can be very complex.
 
-import { futimes } from "node:fs";
-import { loadavg } from "node:os";
 
 // let obj = {
 // 	name: "chitarnshi",
@@ -161,26 +159,4 @@ import { loadavg } from "node:os";
 // },1000)
 
 //setinterval that stops after 5 sec, without usin setinterval and clearinterval
-
-function customSetinterval(fn, delay){
-let isrunning = true;
-function run(){
-    if(!isrunning == false){
-    return;
-    }
-     fn()
-    setTimeout(run, delay)
-}
-run()
-}
-customSetinterval(()=>{
-console.log("hello world");
-},1000)
-
-
-setTimeout(()=>{
-  isrunning = false  
-},5000)
-
-
 
