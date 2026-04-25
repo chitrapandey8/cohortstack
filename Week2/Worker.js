@@ -16,8 +16,6 @@
 import { parentPort } from "worker_threads";
 import fs from 'fs'
 import { resolve } from "dns";
-
-
 parentPort.on('message',(file)=>{
     function Promisifiedport(file){
        return new Promise((resolve, reject)=>{
@@ -26,11 +24,7 @@ parentPort.on('message',(file)=>{
             reject(err)
          }else{
             resolve(data)
-         }
-   })
-    })
-    }
-
+         }})})}
     async function writetofile(){
        try{
         const Data = await Promisifiedport(file)
@@ -41,10 +35,7 @@ parentPort.on('message',(file)=>{
         fs.writeFileSync(file,stringg)
        }catch(err){
         parentPort.postMessage(err);
-        return
-        
-       }
-    }
+        return}}
     writetofile()
 })
 

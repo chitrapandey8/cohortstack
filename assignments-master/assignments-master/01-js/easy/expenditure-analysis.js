@@ -14,6 +14,22 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
+   
+  const mp = new Map();
+  for(let i = 0; i<transactions.length; i++){
+    if (mp.has(transactions[i].category)){
+      mp.set(transactions[i].category, mp.get(transactions[i].category)+transactions[i].price)
+    }else{
+      mp.set(category, transactions[i].price)
+    }}
+ 
+
+    let arr = new Array;
+    for(const  [key, value] of mp){
+      const obj = {category:key, totalSpent:value}
+      arr.push(obj)
+    }
+
   return [];
 }
 
