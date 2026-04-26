@@ -1,0 +1,26 @@
+{
+  "name": "cohortstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"tsc -b",
+    "start": "node ./Week2/index.js",
+    "dev" : "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chitrapandey8/cohortstack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/chitrapandey8/cohortstack/issues"
+  },
+  "homepage": "https://github.com/chitrapandey8/cohortstack#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
