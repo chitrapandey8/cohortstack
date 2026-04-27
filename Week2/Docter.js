@@ -1,4 +1,7 @@
 //////////////////HOSPITAL MANAGMENT////////////////
+//"/files/:filename"
+//const filenmar = req.params.filename
+
 import express from 'express'
 const app = express()
 const PORT = 3000
@@ -23,8 +26,7 @@ app.get('/getdata',(req, res)=>{
         mess:totalcars, //3 
         mess1:healtycars, //0
         mess3:unhealtycars, //3
-     })
-})
+     })})
 
 app.post('/addKidneys',(req, res)=>{
     const ishealthy = req.body.ishealthy // const {ishealthy} = req.body.ishealthy

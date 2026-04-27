@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
-    "start": "node ./Week2/Docter.js",
-    "dev": "nodemon ./Week2/Docter.js"
+    "start": "node ./Week2/FileAssigment.js",
+    "dev": "nodemon ./Week2/FileAssigment.js"
   },
   "repository": {
     "type": "git",
