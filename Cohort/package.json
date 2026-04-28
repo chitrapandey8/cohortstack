@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
-    "start": "node ./Week2/FileAssigment.js",
-    "dev": "nodemon ./Week2/FileAssigment.js"
+    "start": "node ./Week3/Zodd.js",
+    "dev": "nodemon ./Week3/Zodd.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "zod": "^4.3.6"
   }
 }
