@@ -20,4 +20,7 @@ if(KidneyId != 1 && KidneyId != 2){
 app.get('/health', UserMiddleware, Kidneyiddleware,(req, res)=>{
    return  res.send("ur HEalth is healthy")
 })
-app.listen(3000)
+app.listen(3000, ()=>{
+    console.log(`Listening on port ${PORT}`);
+    
+})
