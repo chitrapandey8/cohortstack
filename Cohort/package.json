@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
-    "start": "node ./Week3/Zodd.js",
-    "dev": "nodemon ./Week3/Zodd.js"
+    "start": "node ./Week3/Validation.js",
+    "dev": "nodemon ./Week3/Validation.js"
   },
   "repository": {
     "type": "git",
