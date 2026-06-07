@@ -1,10 +1,14 @@
-//what is currently running or whatever we are running currently on our laptop it goes in ram.
+  //what is currently running or whatever we are running currently on our laptop it goes in ram.
 //ssd--photos video that are not running cureently resides in ssd.
 //we neend language becoz we cannot code in 01010 and complier convert it into 01010 which is understood my computer.
 //g++ c++ ka complier hai commaond "g++ file.cpp -o temp.exe".
+
+//complied language-- cpp, java, rust, golang ye sab complierd languaages se ismai lilha hua koi bhi code pehele complie hota hai uske baad run hota hai
+//interpreted language-- line by line run hota hai ismia kuch eksath complie wala cheez nhi hai,agar teesre line pe erro h toh upar ki do line run karke apna result degi
+
 //replit.
 //browsers understands html, css, javascript.
-// js is dynamically typed language means one variable can store differnt data types
+// js is dynamically, lossly  typed language means one variable can store differnt data types
 // js is single threaded languagen, a core can run one js program at once.it is considered to be bad language for scalable systems.
 // NON - blocking??
 //meta deta--objects can be very complex.
@@ -160,3 +164,20 @@
 
 //setinterval that stops after 5 sec, without usin setinterval and clearinterval
 
+
+ 
+function sum(num1, num2, fn){
+   let result = num1 + num2;
+   return fn(result);
+}
+
+
+function display(fun){
+   console.log("Result is" + " " + fun);
+}
+function display2(fun){
+    console.log("RESULT IS" + " " + fun);
+    
+}
+
+sum(1,2, display2)
